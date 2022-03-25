@@ -47,7 +47,7 @@ function normalizePort(val) {
   }
 
   return false;
-}
+};
 
 /**
  * Event listener for HTTP server "error" event.
@@ -56,7 +56,7 @@ function normalizePort(val) {
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
-  }
+  };
 
   var bind = typeof port === 'string'
     ? 'Pipe ' + port
@@ -75,7 +75,7 @@ function onError(error) {
     default:
       throw error;
   }
-}
+};
 
 /**
  * Event listener for HTTP server "listening" event.
@@ -87,4 +87,4 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-}
+};

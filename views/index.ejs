@@ -5,7 +5,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <nav>
+      <img src="/images/camera.svg">
+      <a href="/tracks" <%- title === 'Explore' ? 'class="active"' : '' %>>EXPLORE</a>
+      <% if (user) { %>
+        <a href="/tracks/new" <%- title === 'Add A Track' ? 'class="active"' : '' %>>ADD A TRACK</a>
+        <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">SIGN IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+    </nav>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <a href="/tracks">View Tracks</a>
   </body>
 </html>

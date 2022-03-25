@@ -1,8 +1,125 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(-100deg, #ff00e6, red, rgb(255, 120, 42), #0117DC);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  z-index: -2;
 }
 
-a {
-  color: #00B7FF;
+.container {
+  height: 900px;
+  width: 900px;
+  margin: auto;
+  opacity: 25%;
+  filter: blur(2px);
+  position: relative;
+  background-color: white;
+  box-shadow: 10px 15px 15px black;
+  z-index: -1;
+}
+
+span {
+  z-index: 1;
+  color: black;
+  opacity: 100%;
+  filter: blur(0px);
+  position: absolute;
+  width: 900px;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#banner {
+  background-color: black;
+  width: 900px;
+  margin: auto;
+}
+
+#banner-text {
+  color: white;
+  width: 100%;
+  position: relative;
+  margin-top: -40%;
+}
+
+#banner-text h1 {
+  text-align: center;
+  color: white;
+  font-size: 6vw;
+  margin-top: 280px;
+  animation: fadeInText 2s;
+  text-decoration: underline;
+  text-decoration-color: #7AAEC4;
+  transition: all 0.3s ease 0s;
+}
+
+img {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: auto;
+  opacity: 30%;
+  animation: fadeInImg 7s;
+  background-color: black;
+  filter: blur(2px);
+  box-shadow: 10px 15px 15px black;
+}
+
+nav {
+  display: flex;
+  color: black;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+#banner-text h1:hover {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-decoration-color: rgb(212, 166, 255);
+}
+
+
+
+
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeInImg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 30%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }

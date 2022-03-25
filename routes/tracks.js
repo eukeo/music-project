@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
+const tracksCtrl = require('../controllers/tracks.js');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', tracksCtrl.index);
+router.get('/new', tracksCtrl.new);
+router.post('/', tracksCtrl.create);
 
 module.exports = router;
