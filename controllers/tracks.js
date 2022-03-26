@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const Track = require('../models/track.js');
 
 
@@ -5,28 +6,30 @@ module.exports = {
     index,
     new: newTrack,
     create,
+    show
 };
 
 function index(req, res){
     Track.find({}, function(err, tracks) {
-        res.render('tracks', {tracks})
+        res.render('tracks/index', { tracks })
     })
 };
 
 function newTrack(req, res){
-    res.render('tracks/new')
+    res.render('tracks')
 }
 
 function create(req, res) {
-    for (let key in req.body) {
-      if (req.body[key] === '') delete req.body[key];
-    }
-    console.log(req.body)
-    const track = new Track(req.body);
-    console.log(track)
-    track.save(function(err) {
-      if (err) return res.render('tracks/new');
-      console.log(track);
-      res.redirect('tracks');
+  const track = new Track(req.body);
+  track.save(function(err) {
+    if (err) return res.render('tracks');
+    console.log(track);
+    res.redirect('tracks');
+  });
+}
+
+  function show(req, res) {
+    res.render('tracks', {
+      track: Track.getOne(req.params.id),
     });
   }

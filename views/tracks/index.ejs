@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/public/javascript/soundcloud.js"></script>
+
+
     <title>Document</title>
 </head>
-<body> 
-    <h1>EXPLORE</h1>
+<body>
+    
+    <div class="container"></div>
+        <div class="link">
+            <form action="/tracks" method="POST">
+                <label>LINK:
+                    <input type="Url" name="addTrack">
+                </label>
+        </div>
+        <div class="status">
+                <label>STATUS:
+                    <input type="text" name="status">
+                </label>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+
+        <% tracks.forEach(function(track) { %>
+        <%= track.addTrack %>
+        <%= track.status %>
+        <% }) %>
+
 </body>
 </html>
