@@ -28,8 +28,11 @@ function create(req, res) {
   });
 }
 
-  function show(req, res) {
-    res.render('tracks', {
-      track: Track.getOne(req.params.id),
-    });
-  }
+function show(req, res) {
+  Track.findById(req.params.id, function(err, tracks){
+    res.render('tracks/comments', {
+      title: 'Comments',
+      track: Track
+    })
+  })
+}
