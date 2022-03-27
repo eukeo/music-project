@@ -1,17 +1,29 @@
 body {
-  background-color: rgb(22, 22, 22);
+  background: rgb(20, 20, 20);
   color: white;
 }
 
-.container {
-  background-color: rgb(36, 36, 36);
-  border: 2px;
+div {
+  margin: auto;
+  background-color: white;
+  color: black;
+  width: 650px;
+  height: 40px;
 }
 
-.status {
-  background-color: rgb(36, 36, 36);
+form {
+  margin: auto;
+  background-color: white;
+  color: black;
+  width: 650px;
+  height: 40px;
 }
 
-.link {
-  background-color: rgb(36, 36, 36);
+section {
+  margin-top: 10px;
+  margin: auto;
+  width: 650px;
+  height: 40px;
+  background-color: white;
+  color: black;
 }

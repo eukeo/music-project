@@ -15,23 +15,25 @@
             <div class="link">
                 <form action="/tracks" method="POST">
                     <label>LINK:
-                        <input type="Url" name="addTrack">
+                        <input type="Url" name="addTrack" id="link">
                     </label>
             </div>
             <div class="status">
                     <label>STATUS:
-                        <input type="text" name="status">
+                        <input type="text" name="status" id="status">
                     </label>
                     <input type="submit" value="Upload">
                 </form>
             </div>
-        </div>
+            <section>
             <% tracks.forEach(function(track) { %>
-            <td><%= track.addTrack %></td>
-            <td><%= track.status %></td>
-            <td><%= track.addComment %></td>
-            <a href="/tracks/<%= track._id %>/comments" class="addComment" name="addComment">Comments</a>
-            <% }) %>
+                <td><%= track.addTrack %></td>
+                <td><%= track.status %></td>
+                <td><%= track.addComment %></td>
+                <a href="/tracks/<%= track._id %>/comments" class="addComment" name="addComment">Comments</a>
+                <% }) %>
+            </section>
+            </div>
     </tr>
 </body>
 </html>

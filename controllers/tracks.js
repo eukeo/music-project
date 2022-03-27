@@ -32,6 +32,6 @@ function create(req, res) {
 function show(req, res) {
   Track.findById(req.params.id, (err, track) =>{
   console.log(track.createdAt)
-      res.render('tracks/show', { track })
+      res.render('tracks/comments', { track })
   })
 };
