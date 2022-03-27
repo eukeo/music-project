@@ -11,8 +11,8 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var tracksRouter = require('./routes/tracks');
-var statusRouter = require('./routes/tracks');
-const track = require('./models/track');
+// var commentsRouter = require('./routes/comments');
+// const track = require('./models/track');
 
 var app = express();
 
@@ -40,8 +40,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/tracks', tracksRouter);
-app.use('/tracks', statusRouter);
-app.post('/tracks', indexRouter);
+// app.post('/tracks', commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

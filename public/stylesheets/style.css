@@ -8,11 +8,6 @@ body {
   border: 2px;
 }
 
-img {
-  height: 100px;
-  width: 100px;
-}
-
 .status {
   background-color: rgb(36, 36, 36);
 }

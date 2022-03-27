@@ -17,22 +17,21 @@ function index(req, res){
 
 function newTrack(req, res){
     res.render('tracks')
-}
+};
 
 function create(req, res) {
-  const track = new Track(req.body);
-  track.save(function(err) {
-    if (err) return res.render('tracks');
-    console.log(track);
-    res.redirect('tracks');
-  });
-}
+  const track = new Track(req.body)
+  track.save((err) => {
+      if(err){
+    return res.render('tracks')
+  }
+    res.redirect('tracks')
+  })
+};
 
 function show(req, res) {
-  Track.findById(req.params.id, function(err, tracks){
-    res.render('tracks/comments', {
-      title: 'Comments',
-      track: Track
-    })
+  Track.findById(req.params.id, (err, track) =>{
+  console.log(track.createdAt)
+      res.render('tracks/show', { track })
   })
-}
+};
