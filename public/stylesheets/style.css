@@ -3,6 +3,47 @@ body {
   color: white;
 }
 
+nav {
+  color: white;
+  background-color: rgb(82, 117, 82);
+  height: 40px;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.login {
+  color: white;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.home-logo {
+  height: 36px;
+  width: 40px;
+}
+
+.logout-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 175px;
+  width: 200px;
+  height: 200px;
+}
+
 div {
   margin: auto;
   background-color: white;
