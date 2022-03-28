@@ -10,13 +10,6 @@ const addCommentSchema = new Schema({
     }
 });
 
-const viewCommentSchema = new Schema({
-    viewComment:{
-        type: String, 
-        timestamps: true
-    }
-});
-
 const trackSchema = new Schema({
     addTrack:{
         type: String, 
@@ -27,9 +20,13 @@ const trackSchema = new Schema({
         required: true
     },
     addComment: [addCommentSchema]
-    }, {
-    viewCommentSchema: [viewCommentSchema]
-    }, {
+});
+
+const viewCommentsSchema = new Schema({
+    viewComment:{
+        type: String, 
+        timestamps: true
+    }
 });
 
 // var options = { 

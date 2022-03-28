@@ -1,11 +1,10 @@
-// const Track = require('../models/track');
+const Comment = require('../models/track.js');
 
-// module.exports = {
-//     create
-// };
+module.exports = {
+    show,
+    update
+};
 
-// function create(req, res) {
-//   Track.findById(req.params.id, function(err, tracks){
-//     tracks.comments.push(req.body)
-//     tracks.save(function(err){
-//       res.redirect(`/tracks/${tracks._id}`);
+
+
+module.exports = mongoose.model('Comments', viewCommentsSchema);

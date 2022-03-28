@@ -1,0 +1,88 @@
+body {
+    background: rgb(20, 20, 20);
+    color: white;
+  }
+  
+  nav {
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgb(82, 117, 82);
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    border-style: ridge;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  
+  .login {
+    color: white;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    
+  }
+  
+  .corner {
+    height: 40px;
+    width: 40px;
+    display: left;
+    height: 40px;
+    padding-top: 15px;
+  }
+  
+  .home-logo {
+    height: 36px;
+    width: 40px;
+    height: 40px;
+    padding-top: 15px;
+  }
+  
+  .logout-logo {
+    height: 40px;
+    width: 40px;
+    height: 40px;
+    padding-top: 15px;
+  }
+  
+  .soundcloud-logo {
+    height: 70px;
+    width: 65px;
+  }
+  
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 175px;
+    width: 200px;
+    height: 200px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+@keyframes fadeIn { 
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}   
+    
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.home-logo:hover {
+    float: shadow;
+}

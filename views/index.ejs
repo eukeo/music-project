@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Wubble</title>
+    <link rel='stylesheet' href='/stylesheets/login.css' />
   </head>
   <body>
+    
     <nav>
-      <% if (user) { %>
-        <a href="/tracks"><img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" class="home-logo"><%- title === 'Add A Track' ? 'class="active"' : '' %></a>
-        <a href="/logout"><img src="https://i.imgur.com/pN55Y25.png" class="logout-logo"></a>
-      <% } else { %>
-        <a href="/auth/google" class="login">SIGN IN&nbsp;<img src=""></a>
-      <% } %>
+      <ul>
+          <li><img src="https://worldwaterskiers.com/wp-content/themes/WorldWaterSkiers/downloads/logos/W-Icon-White-Circle.png" class="corner"></li>
+        <% if (user) { %>
+          <li><a href="/tracks"><img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" class="home-logo"><%- title === 'Add A Track' ? 'class="active"' : '' %></a></li>
+          <li><a href="/logout"><img src="https://i.imgur.com/pN55Y25.png" class="logout-logo"></a></li>
+        <% } else { %>
+          <li><a href="/auth/google" class="login"><img src="https://i.imgur.com/pN55Y25.png" class="logout-logo"></a></li>
+        <% } %>
+        <li><a href="https://soundcloud.com/you/likes"><img src="https://a-v2.sndcdn.com/assets/images/peace-cloud-28ad0963.svg" class="soundcloud-logo"></a>
+      </ul>  
     </nav>
+    
         <img src="https://worldwaterskiers.com/wp-content/themes/WorldWaterSkiers/downloads/logos/W-Icon-White-Circle.png" class="logo">
   </body>
 </html>
