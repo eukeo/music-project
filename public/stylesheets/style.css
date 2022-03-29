@@ -11,6 +11,13 @@ nav {
   border-color: white;
 }
 
+#sc-widget {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  position: center;
+}
+
 .login {
   color: white;
   display: flex;
