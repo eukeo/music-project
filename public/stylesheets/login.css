@@ -67,6 +67,15 @@ body {
     animation-timing-function: ease-in-out;
   }
 
+  footer {
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    position: absolute;
+  }
+
 @keyframes fadeIn { 
 	0% {opacity: 0;}
 	100% {opacity: 1;}

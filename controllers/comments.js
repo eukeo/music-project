@@ -2,8 +2,32 @@ const Comment = require('../models/track.js');
 
 module.exports = {
     show,
-    update
+    create,
+    update,
+    edit, 
+    delete: deleteComment
 };
+
+function show(req, res) {
+    track.findById(req.params.id, (err, track) =>{
+    console.log(track.createdAt)
+        res.render('tracks/comments', { track })
+    })
+  };
+
+function create(req, res) {
+    const track = new Comment(req.body)
+    track.save((err) => {
+        if(err){
+      return res.render('comments')
+    }
+      res.redirect(':id/comments')
+    })
+};
+
+function update(req, res) {
+
+}
 
 
 
