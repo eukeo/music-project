@@ -4,14 +4,13 @@ module.exports = {
     show,
     create,
     update,
-    edit, 
     delete: deleteComment
 };
 
 function show(req, res) {
     track.findById(req.params.id, (err, track) =>{
     console.log(track.createdAt)
-        res.render('tracks/comments', { track })
+        res.render(':id/comments', { track })
     })
   };
 

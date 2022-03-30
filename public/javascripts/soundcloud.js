@@ -1,9 +1,31 @@
-// 1. Be able to get the data from the input field
-// 2. Save that data in a global variable AND use let so it can be changed
-// 3. Interpolate the src tag in the widget link with the variable from input
-// Let scurl = e.target.value
-// src=`kjhlhdjhw;hwg;url=${curl}`
+// var widgetIframe = document.getElementById('sc-widget'); 
+var scUpload = document.getElementById('upload');
+// var widgetIframeSrc = ('https://w.soundcloud.com/player/?url=' + e.target.value);
+console.log(scUpload)
+
+scUpload.addEventListener('click', function() {
+//    scInput.append(widgetIframeSrc)
+console.log('hi')
+});
 
 
-let scUrl = e.target.value('url');
-let scSrc = (`url=${scUrl}`);
+
+
+
+
+
+
+// (function(){
+//     var widgetIframe = document.getElementById('sc-widget'),
+//         widget       = SC.Widget(widgetIframe),
+//         newSoundUrl = url;
+   
+//     widget.bind(SC.Widget.Events.READY, function() {
+//       // load new widget
+//       widget.bind(SC.Widget.Events.FINISH, function() {
+//         widget.load(newSoundUrl, {
+//           show_artwork: false
+//         });
+//       });
+//     });
+//   }());

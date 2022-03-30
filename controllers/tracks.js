@@ -11,8 +11,8 @@ module.exports = {
 
 function index(req, res){
     Track.find({}, function(err, tracks) {
-        res.render('tracks/index', { tracks })
-    })
+        res.render('tracks', { tracks })
+  })
 };
 
 function newTrack(req, res){
@@ -20,18 +20,21 @@ function newTrack(req, res){
 };
 
 function create(req, res) {
+  Track.find({}, function(err, tracks) {
   const track = new Track(req.body)
-  track.save((err) => {
+  track.save((err, track) => {
       if(err){
-    return res.render('tracks')
+    return res.redirect('tracks')
   }
-    res.redirect('tracks')
+  console.log(track)
+  res.render('tracks', {track, tracks})
+    })
   })
 };
 
 function show(req, res) {
   Track.findById(req.params.id, (err, track) =>{
   console.log(track.createdAt)
-      res.render('tracks/comments', { track })
+      res.render('tracks/:id/comments', { track })
   })
 };

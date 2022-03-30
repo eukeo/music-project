@@ -14,16 +14,8 @@ nav {
 #sc-widget {
   margin-left: auto;
   margin-right: auto;
-  display: inline;
+  display: block;
   position: center;
-}
-
-.login {
-  color: white;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  
 }
 
 .corner {
