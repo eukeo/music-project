@@ -24,10 +24,10 @@ function create(req, res) {
   const track = new Track(req.body)
   track.save((err, track) => {
       if(err){
-    return res.redirect('tracks')
-  }
-  console.log(track)
-  res.render('tracks', {track, tracks})
+        return res.redirect('tracks')
+      }
+      console.log(track)
+      res.render('tracks', {track, tracks})
     })
   })
 };

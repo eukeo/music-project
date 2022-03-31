@@ -1,15 +1,13 @@
 // var widgetIframe = document.getElementById('sc-widget'); 
 var scUpload = document.getElementById('upload');
 // var widgetIframeSrc = ('https://w.soundcloud.com/player/?url=' + e.target.value);
+
 console.log(scUpload)
 
 scUpload.addEventListener('click', function() {
 //    scInput.append(widgetIframeSrc)
-console.log('hi')
-});
-
-
-
+// console.log('hi')
+}); 
 
 
 
