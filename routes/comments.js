@@ -4,6 +4,7 @@ const commentsCtrl = require('../controllers/comments.js');
 
 router.get('/:id/comments', commentsCtrl.show);
 router.get('/:id/comments', commentsCtrl.create);
+// router.put('/:id/comments', commentsCtrl.edit)
 router.put('/:id/comments', commentsCtrl.update);
 
 

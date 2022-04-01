@@ -9,5 +9,13 @@
 </head>
 <body>
     <h1><a href="<% /tracks/<%= track._id %>/comments %>"></a></h1>
+            <section>    
+                <% tracks.forEach(function(track) { %>
+                <iframe id="sc-widget" width="650px" height="120" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<%= track.addTrack %>"></iframe> 
+                <td><%= track.status %></td>
+                <td><%= track.addComment %></td>
+                <a href="/tracks/<%= track._id %>/comments" class="addComment" name="addComment">View Comments</a>
+                <% }) %>
+            </section>
 </body>
 </html>

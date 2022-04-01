@@ -1,10 +1,11 @@
 const Comment = require('../models/track.js');
 
+
+
 module.exports = {
     show,
     create,
-    update,
-    delete: deleteComment
+    update
 };
 
 function show(req, res) {
@@ -21,13 +22,9 @@ function create(req, res) {
       return res.render('comments')
     }
       res.redirect(':id/comments')
-    })
+  })
 };
 
 function update(req, res) {
-
+  
 }
-
-
-
-module.exports = mongoose.model('Comments', viewCommentsSchema);
